@@ -11,6 +11,8 @@
         "Blog_name" : "WeGrow Blogs", 
         "tag_Line" : "Let's Grow together!!", 
         "gmail-user" : "Akachiyt9@gmail.com", 
-        "gmail-password" : "@Kachi8304"
+        "gmail-password" : "@Kachi8304", 
+        "about_text" : "Hy, My name is Adarsh Rawat. I am a developer and learning flask right now.",
+        "no_of_posts" : 3
     }
 }
