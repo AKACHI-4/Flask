@@ -48,17 +48,21 @@
     <body class="text-center">
     
     <main class="form-signin">
-        <form>
-            <img class="mb-4" src="{{ url_for('static', filename='assets/favicon.ico' ) }}" alt="" width="72" height="72">
+        <form action="/login" method="post">
+          {% set fname = 'img/' + params['login_img'] %}
+
+            <a href="/"><img class="mb-4" src="https://img.icons8.com/ios/50/null/doom-logo.png" alt="" width="72" height="72"></a>
+            <!-- <img class="mb-4" src="{{ url_for('static', filename='fname') }}" alt="" width="72" height="72"> -->
+
             <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
             <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
+            <input type="text" class="form-control" id="uname" name="uname" id="floatingInput" placeholder="User name">
+            <label for="uname">Username</label>
             </div>
             <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
+            <input type="password" class="form-control" name="pass" id="Pass" placeholder="Password">
+            <label for="pass">Password</label>
             </div>
 
             <div class="checkbox mb-3">
@@ -67,7 +71,7 @@
             </label>
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-            <p class="mt-5 mb-3 text-muted">&copy; {{params['Blogname']}} 2021–2022</p>
+            <p class="mt-5 mb-3 text-muted">&copy; {{params['Blogname']}} 2022–2023</p>
         </form>
     </main>
 
