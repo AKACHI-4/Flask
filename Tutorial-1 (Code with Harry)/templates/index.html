@@ -45,8 +45,10 @@
                     {% endfor %}
 
                     <!-- Pager-->
-                    <div class="d-flex justify-content-start mb-4"><a class="btn btn-primary text-uppercase" href="#!">← Newer Posts →</a></div>
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+                    <div class="d-flex justify-content-between mb-4">
+                        <a class="btn btn-primary text-uppercase" href="{{prev}}">← Newer Posts</a>
+                        <a class="btn btn-primary text-uppercase" href="{{next}}">Older Posts →</a>
+                    </div>
                 </div>
             </div>
         </div>
