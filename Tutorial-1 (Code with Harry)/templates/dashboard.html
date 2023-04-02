@@ -22,12 +22,17 @@
                   <h3>Basic Actions</h3>
                   
                   <a href="/edit/0"><button class="btn btn-primary">Add a new post</button></a>
-                  <button class="btn btn-primary">Logout</button>
+                  <a href=""><button class="btn btn-primary">Logout</button></a>
 
                   <hr>
                   
                   <h3>Upload a file</h3>
-                    File uploader will be added here
+                    
+                  <form action='/uploader' method='post' enctype="multipart/form-data">
+                    <input type="file" name="file1">
+                    <button class="btn btn-primary">Submit</button>
+                  </form>
+
                   
                   <h3 class="my-4">Add/Edit Post</h3>
 
@@ -46,7 +51,7 @@
 
                       {% for post in posts%}
                       <tr>
-                        <th scope="row">{{ post.sno }}</td>
+                        <th scope="row">{{ post.sno }}</th>
                         <td>{{ post.title }}</td>
                         <td>{{ post.date }}</td>
                         <td>
@@ -54,7 +59,11 @@
                             <button class='btn btn-primary'>Edit</button>
                           </a>
                         </td>
-                        <td><button class='btn btn-primary'>Delete</button></td>
+                        <td>
+                          <a href='/delete/{{ post.sno }}'>
+                            <button class='btn btn-primary'>Delete</button>
+                          </a>
+                        </td>
                       </tr>
                       {% endfor %}
                     
